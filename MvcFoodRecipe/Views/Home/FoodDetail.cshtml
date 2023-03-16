@@ -1,0 +1,19 @@
+﻿@model MvcFoodRecipe.Models.Domain.FoodItem
+@{
+}
+<div class="food-detail w-80 m-auto">
+    <div class="img-container">
+        <img alt="image" src="/Uploads/@Model.RecipeImage">
+    </div>
+
+    <div class="detail-container">
+        <h3>@Model.Title</h3>
+
+        <h4>@Model.Ingredients</h4>
+        <h4>@Model.FoodPhoto</h4>
+        <h4>Steps:@Model.Steps</h4>
+    </div>
+</div>
+<div class="w-80 m-auto">
+    <a href="/Home/Index" class="btn btn-default">Back</a>
+</div>

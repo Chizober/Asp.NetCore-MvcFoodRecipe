@@ -1,0 +1,36 @@
+﻿@model MvcFoodRecipe.Models.DTO.FoodListVm
+@{
+}
+
+<div class="tbl-container">
+    <h2>FoodItems</h2>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>FoodPhoto</th>
+             <th>Steps</th>
+            <th>Ingredients</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var item in Model.FoodList)
+        {
+        <tr>
+            <td>@item.Title</td>
+              
+            <td><img style="height:60px;width:80px" src="/Uploads/@item.RecipeImage"/></td>
+                <td>@item.Steps</td>
+                <td>@item.Ingredients</td>
+                     <td>@item.FoodPhoto</td>
+                <td>
+                    <a href="/Food/Edit?id=@item.Id" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                    <a onclick="return window.confirm('Are you sure?')" href="/Food/Delete?id=@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        }
+     
+    </table>
+    <div class="input-container">
+        <a href="/Food/Add" class="btn btn-sec">Back</a>
+    </div>
+</div>
