@@ -44,7 +44,13 @@
         <span asp-validation-for="Calories"> </span>
     </div>
 
-
+    <div class="input-container">
+        <label asp-for="FoodPhoto" class="w-40">FoodPhoto</label>
+        <input type="text" class="input" asp-for="FoodPhoto">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="FoodPhoto"> </span>
+    </div>
 
     <div class="input-container">
         <label asp-for="Ingredients" class="w-40">Ingredients</label>

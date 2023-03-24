@@ -42,16 +42,19 @@ namespace MvcFoodRecipe.Controllers
                 var imageName = fileReult.Item2;
                 model.RecipeImage = imageName;
             }
-            var result = _foodService.Add(model);
+            var result = _foodService.Update(model);
             if (result)
             {
                 TempData["msg"] = "Added Successfully";
-                return RedirectToAction(nameof(Add));
+                return RedirectToAction(nameof(FoodList));
             }
             else
             {
                 TempData["msg"] = "Error on server side";
                 return View(model);
+
+
+
             }
         }
 
@@ -80,7 +83,7 @@ namespace MvcFoodRecipe.Controllers
             var result = _foodService.Update(model);
             if (result)
             {
-                TempData["msg"] = "Added Successfully";
+                TempData["msg"] = "edited Successfully";
                 return RedirectToAction(nameof(FoodList));
             }
             else
@@ -92,6 +95,7 @@ namespace MvcFoodRecipe.Controllers
 
         public IActionResult FoodList(string SearchText = "")
         {
+
 
             FoodListVm fmmodel = new FoodListVm();
 

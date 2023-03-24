@@ -9,10 +9,10 @@
 
 <div class="jumbotron jumbotron-fluid" style="margin-top: 100px;height: 60%; padding: 10px 0;font-family: sans-serif;">
     <div class="container">
-        <h1 class="text-center" style="font-family: Oswald;font-weight: bold">Zober's Food Recipe</h1>
+        <h1 class="text-center" style="font-family: Oswald;font-weight: bold"><span style="color:red";>Zober's </span>Food Recipe</h1>
         <p class="lead text-center">
             I never refuse the food that someone offers me because this is my ninja way!".
-            <cite style="color:#333";class=" badge badge-dark">Share Idea's</cite>
+            <cite style="color:#333";class=" badge badge-dark">Foodies's word</cite>
         </p>
     </div>
 </div>
@@ -33,7 +33,7 @@
                         <p class="card-text">DietLabel: @food.DietLabel</p>
                         <p class="card-text">Calories: @food.Calories</p>
 
-                        <button class="btn btn-sm"><a href="/Home/FoodDetail?foodId=@food.Id">View details</a></button>
+                        <button class="btn btn-sm text-black" onclick="window.location.href='/Home/FoodDetail?foodId=@food.Id'">View Details</button>
                           
                     </div>
                 </div></div>
