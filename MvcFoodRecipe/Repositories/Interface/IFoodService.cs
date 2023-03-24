@@ -1,7 +1,7 @@
 ﻿using MvcFoodRecipe.Models.Domain;
 using MvcFoodRecipe.Models.DTO;
 
-namespace MvcFoodRecipe.Repositories.Abstract
+namespace MvcFoodRecipe.Repositories.Interface
 {
     public interface IFoodService
     {
@@ -10,8 +10,8 @@ namespace MvcFoodRecipe.Repositories.Abstract
         
         FoodItem GetById(int id);
         bool Delete(int id);
-       
-        FoodListVm List(string term = "", bool paging = false, int currentPage = 0);
+
+        IEnumerable<FoodItem> List(string term = "", bool paging = false, int currentPage = 0);
     
     }
 }

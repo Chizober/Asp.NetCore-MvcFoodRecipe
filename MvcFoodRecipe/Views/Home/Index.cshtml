@@ -1,44 +1,45 @@
 ﻿@model MvcFoodRecipe.Models.DTO.FoodListVm
 @{
-    ViewData["Title"] = "Home";
+
+    ViewData["Title"] = "I never refuse the food that someone offers me because this is my ninja way!";
+  
     Layout = "_Layout";
 }
-<section class="search-bar">
-    <form method="get" asp-action="Index">visual
-        <input type="text" name="term" placeholder="search here">
-        <button type="submit"><i class="fa fa-search"></i></button>
-        <a class="btn btn-default" href="/Home/Index">All</a>
-    </form>
-</section>
-<section class="foodS">
-    @foreach (var food in Model.FoodList)
-    {
-        <div class="food-card" onclick="window.location.href='/Home/FoodDetail?foodId=@food.Id'">
-            <div class="food-image">
-            <img src="/Uploads/@food.RecipeImage">
-        </div>
-            <div class="food-info">
-            <h4>@food.Title</h4>
-               
-                <h4>@food.Ingredients</h4>
-                <h4>@food.FoodPhoto</h4>
-                 <h4>@food.Steps</h4>
-         
-        </div>
+
+
+<div class="jumbotron jumbotron-fluid" style="margin-top: 100px;height: 60%; padding: 10px 0;font-family: sans-serif;">
+    <div class="container">
+        <h1 class="text-center" style="font-family: Oswald;font-weight: bold">Zober's Food Recipe</h1>
+        <p class="lead text-center">
+            I never refuse the food that someone offers me because this is my ninja way!".
+            <cite style="color:#333";class=" badge badge-dark">Share Idea's</cite>
+        </p>
     </div>
-    }
-</section>
-
-<div class="pagination">
-    @for(int i=1;i<=Model.TotalPages;i++){
-        if(i==Model.CurrentPage){
-            <a href="/Home/Index?currentPage=@i&term=@Model.Term" class="active">@i</a>
-        }
-        else{
-            <a href="/Home/Index?currentPage=@i&term=@Model.Term">@i</a>
-
-        }
-    }
-   
 </div>
+
+<ul class="cards">
+        @foreach (var food in Model.FoodList)
+        {
+            <li class="cards_item">
+        <div class="card">
+            <div onclick="window.location.href='/Home/FoodDetail?foodId=@food.Id'">
+                    <div class="card_image">
+                        <img  src="/Uploads/@food.RecipeImage">
+                        </div>
+                    <div class="card_content">
+ 
+                        <h5 class="card-title">@food.Title</h5>
+                        <p class="card-text"> HealthLabel: @food.HealthLabel</p>
+                        <p class="card-text">DietLabel: @food.DietLabel</p>
+                        <p class="card-text">Calories: @food.Calories</p>
+
+                        <button class="btn btn-sm"><a href="/Home/FoodDetail?foodId=@food.Id">View details</a></button>
+                          
+                    </div>
+                </div></div>
+                </li>
+        }
+  </ul>
+
+
 

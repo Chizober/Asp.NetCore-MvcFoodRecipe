@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MvcFoodRecipe.Models.Domain;
-using MvcFoodRecipe.Repositories.Abstract;
+using MvcFoodRecipe.Models.DTO;
+using MvcFoodRecipe.Repositories.Interface;
 
 namespace MvcFoodRecipe.Controllers
 {
@@ -89,10 +90,21 @@ namespace MvcFoodRecipe.Controllers
             }
         }
 
-        public IActionResult FoodList()
+        public IActionResult FoodList(string SearchText = "")
         {
-            var data = this._foodService.List();
-            return View(data);
+
+            FoodListVm fmmodel = new FoodListVm();
+
+            if (SearchText != "" && SearchText != null)
+            {
+                fmmodel.FoodList = _foodService.List()
+                .Where(p => p.Title.Contains(SearchText)).ToList();
+            }
+            else
+                fmmodel.FoodList = _foodService.List();
+
+            return View(fmmodel);
+
         }
 
         public IActionResult Delete(int id)

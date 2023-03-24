@@ -1,16 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using MovieStoreMvc.Repositories.Implementation;
 using MvcFoodRecipe.Models.Domain;
-using MvcFoodRecipe.Repositories.Abstract;
+using MvcFoodRecipe.Repositories.Interface;
 using MvcFoodRecipe.Repositories.Implementation;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-/*builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();*/
+builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IFoodService, FoodService>();
 

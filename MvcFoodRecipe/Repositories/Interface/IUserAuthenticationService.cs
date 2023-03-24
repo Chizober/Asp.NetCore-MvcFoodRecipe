@@ -1,6 +1,6 @@
 ﻿using MvcFoodRecipe.Models.DTO;
 
-namespace MvcFoodRecipe.Repositories.Abstract
+namespace MvcFoodRecipe.Repositories.Interface
 {
     public interface IUserAuthenticationService
     {

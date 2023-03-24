@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MvcFoodRecipe.Models.DTO;
-using MvcFoodRecipe.Repositories.Abstract;
-
+using MvcFoodRecipe.Repositories.Interface;
 namespace MvcFoodRecipe.Controllers
 {
     public class UserAuthenticationController : Controller
@@ -18,21 +17,21 @@ namespace MvcFoodRecipe.Controllers
           I have create a complete tutorial for this, you can check the link in description box
          */
 
-        //public async Task<IActionResult> Register()
-        //{
-        //    var model = new RegistrationModel
-        //    {
-        //        Email = "admin@gmail.com",
-        //        Username = "admin",
-        //        Name = "Ravindra",
-        //        Password = "Admin@123",
-        //        PasswordConfirm = "Admin@123",
-        //        Role = "Admin"
-        //    };
+        /*public async Task<IActionResult> Register()
+        {
+         var model = new RegistrationModel
+          {
+        Email = "egbujie.chizoba@gmail.com",
+        Username = "admin",
+        Name = "Chizoba",
+        Password = "Zober@123",
+        PasswordConfirm = "Zober@123",
+        Role = "Admin"
+        };
         //    // if you want to register with user , Change Role="User"
-        //    var result = await authService.RegisterAsync(model);
-        //    return Ok(result.Message);
-        //}
+        var result = await authService.RegisterAsync(model);
+        return Ok(result.Message);
+        }*/
 
         public async Task<IActionResult> Login()
         {

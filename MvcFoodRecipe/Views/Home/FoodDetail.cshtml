@@ -1,7 +1,23 @@
 ﻿@model MvcFoodRecipe.Models.Domain.FoodItem
 @{
 }
-<div class="food-detail w-80 m-auto">
+
+
+
+<section class="two-columns">
+    <div>
+        <img class="pic" alt="image" src="/Uploads/@Model.RecipeImage">
+        </div>
+    <div class="content">
+            <h5>@Model.Title</h5>
+            <h4>Ingredients:@Model.Ingredients </h4>
+            <p>Steps:@Model.Steps</p>
+            <div class="data">
+                <a href="/Home/Index" class="details">Back</a>
+            </div>
+        </div>
+</section>
+@*<div class="food-detail w-80 m-auto">
     <div class="img-container">
         <img alt="image" src="/Uploads/@Model.RecipeImage">
     </div>
@@ -9,11 +25,11 @@
     <div class="detail-container">
         <h3>@Model.Title</h3>
 
-        <h4>@Model.Ingredients</h4>
+        <h4>Ingredients:@Model.Ingredients</h4>
         <h4>@Model.FoodPhoto</h4>
         <h4>Steps:@Model.Steps</h4>
     </div>
 </div>
 <div class="w-80 m-auto">
     <a href="/Home/Index" class="btn btn-default">Back</a>
-</div>
+</div>*@

@@ -2,33 +2,32 @@
 using MvcFoodRecipe.Models;
 using MvcFoodRecipe.Models.Domain;
 using MvcFoodRecipe.Models.DTO;
+using MvcFoodRecipe.Repositories.Interface;
 using System.Diagnostics;
 
 namespace MvcFoodRecipe.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        
+        private readonly IFoodService _foodService;
+        public HomeController(ILogger<HomeController> logger, IFoodService FoodService)
         {
-            _logger = logger;
+            _foodService = FoodService;
+            
         }
 
         public IActionResult Index()
         {
-            return View();
+            FoodListVm fmmodel = new FoodListVm();
+            fmmodel.FoodList = _foodService.List();
+            return View(fmmodel);
         }
 
-        public IActionResult Privacy()
+        public IActionResult FoodDetail(int foodId)
         {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var food = _foodService.GetById(foodId);
+            return View(food);
         }
     }
 }

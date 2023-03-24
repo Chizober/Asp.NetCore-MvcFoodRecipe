@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcFoodRecipe.Models.Domain;
 
@@ -11,9 +12,10 @@ using MvcFoodRecipe.Models.Domain;
 namespace MvcFoodRecipe.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20230322001351_addedUser")]
+    partial class addedUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -232,16 +234,7 @@ namespace MvcFoodRecipe.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Calories")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DietLabel")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FoodPhoto")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HealthLabel")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ingredients")

@@ -36,16 +36,20 @@ display: block;
 color: var(--primary - color);
 
 }
-.input
-{
-padding: 0 0.5rem;
-border: 0;
+.input{
+    padding: 0 0.5rem;
+    border: 0;
     box-shadow: 0 1px 3px 0 rgb(43, 43, 43);
     font-size: 15px;
-width: 100%;
-color: var(--primary - color);
+    width: 100%;
+    color: var(--primary - color);
     border-radius: 5px;
 }
+textarea{
+    height:150px;
+    resize:vertical;
+}
+ 
 
 .alert
 {
@@ -60,7 +64,7 @@ color:var(--primary - color);
 
 .btn
 {
-color: white;
+color: #fff;
 padding: 0.5rem 1rem;
     border-radius: 0.3rem;
     font-size: 1rem;
@@ -74,12 +78,16 @@ display: inline-block;
 display: inline-block;
     margin-right: 0.2rem;
 }
+    .btn:hover
+    {
+color:#eee;
+    }
 
-.btn-default{
-background: #6a3093;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+    .btn-default {
+        background: #6a3093; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #a044ff, #6a3093); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 
 .btn-sec{
 background: #4d63df;  /* fallback for old browsers */

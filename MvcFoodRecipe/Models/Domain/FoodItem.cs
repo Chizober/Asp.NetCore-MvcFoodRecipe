@@ -11,6 +11,10 @@ namespace MvcFoodRecipe.Models.Domain
         public int Id { get; set; }
         [Required]
         public string? Title { get; set; }
+        public string? DietLabel { get; set; }
+        public string? HealthLabel { get; set; }
+        [Required]
+        public int Calories { get; set; }
         public string? FoodPhoto { get; set; }
 
         public string? RecipeImage { get; set; }  // stores movie image name with extension (eg, image0001.jpg)

@@ -1,5 +1,4 @@
-﻿
-using MvcFoodRecipe.Repositories.Abstract;
+﻿using MvcFoodRecipe.Repositories.Interface;
 
 namespace MvcFoodRecipe.Repositories.Implementation
 { 
