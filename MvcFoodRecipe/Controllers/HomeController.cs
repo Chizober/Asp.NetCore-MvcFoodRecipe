@@ -23,6 +23,11 @@ namespace MvcFoodRecipe.Controllers
             fmmodel.FoodList = _foodService.List();
             return View(fmmodel);
         }
+        public IActionResult About()
+        {
+          
+            return View();
+        }
 
         public IActionResult FoodDetail(int foodId)
         {

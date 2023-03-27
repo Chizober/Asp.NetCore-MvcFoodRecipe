@@ -37,17 +37,18 @@ body {
     .navbar li {
         position: relative;
     }
-.navbar  a, .navbar .nav-item
-.navbar  a:focus, .navbar  .nav-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6px 10px 6px 30px;
-    font-size: 15px;
-    color: #0b2341;
-    white-space: nowrap;
-    transition: 0.3s;
-}
+    .navbar a, .navbar .nav-item
+    .navbar a:focus, .navbar .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 10px 6px 30px;
+        font-size: 15px;
+        color: #0b2341;
+        ;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
 
 
     .navbar  a:hover, .navbar .nav-item:hover,
@@ -56,17 +57,7 @@ body {
     .navbar .nav-item:hover > a {
         color: #ed502e;
     }
-/*a {
-    color: #333;
-    text-decoration: none;
-    font-size:16px;
-    margin-right:30px;
-}
 
-    a:hover {
-        color:navbar
-        text-decoration: none;
-    }*/
 
 h1,
 h2,
@@ -136,9 +127,6 @@ h6 {
     margin: auto;
 }
 
-/*new css*/
-
-
 
 .btn-primary {
     color: #fff;
@@ -150,43 +138,10 @@ h6 {
 
 
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 996;
-    background: #ed502e;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-}
-
-    .back-to-top i {
-        font-size: 28px;
-        color: #0b2341;
-        line-height: 0;
-    }
-
-    .back-to-top:hover {
-        background: #f06f54;
-        color: #fff;
-    }
-
-    .back-to-top.active {
-        visibility: visible;
-        opacity: 1;
-    }
 
 /*--------------------------------------------------------------
-# Header
+# Index and foodlist pages
 --------------------------------------------------------------*/
-
 
 .container {
     max-width: 1200px;
@@ -279,16 +234,7 @@ img {
     font-weight: 400;
 }
 
-.made_by {
-    font-weight: 400;
-    font-size: 13px;
-    margin-top: 35px;
-    text-align: center;
-}
-
-
-
-      
+   
 
 .cardContainer {
     
@@ -296,7 +242,7 @@ img {
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     margin-top: 100px;
-    width:60%;
+    width:100%;
 }
 .cardDetails {
    
@@ -311,7 +257,7 @@ img {
     align-items: center;
 }
 .card-info {
-    color: #333;
+    color: #071527;
     padding: 0 10px;
     font-size: 14px;
     word-break: break-all;
@@ -346,9 +292,10 @@ img {
     }
 
     .image {
-        width: 100%;
+        margin: 0 auto;
         display:block;
-        align-items:center;
+        width:fit-content;
+       /* align-items:center;*/
         
 
     }
@@ -356,126 +303,13 @@ img {
 
     }
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact .info-box {
-    color: #0b2341;
-    text-align: center;
-    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-    padding: 20px 0 30px 0;
-    background: #fff;
-}
-
-    .contact .info-box i {
-        font-size: 32px;
-        color: #ed502e;
-        border-radius: 50%;
-        padding: 8px;
-        border: 2px dotted #fbdad2;
-    }
-
-    .contact .info-box h3 {
-        font-size: 20px;
-        color: #777777;
-        font-weight: 700;
-        margin: 10px 0;
-    }
-
-    .contact .info-box p {
-        padding: 0;
-        line-height: 24px;
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-/*footer*/
-
-.footer {
-    background: #071527;
-    padding: 0 0 30px 0;
-    color: #fff;
-    font-size: 14px;
-}
-
-    .footer .copyright {
-        border-top: 1px solid #0f2f57;
-        text-align: center;
-        padding-top: 30px;
-    }
-
-    .footer .credits {
-        padding-top: 10px;
-        text-align: center;
-        font-size: 13px;
-        color: #fff;
-    }
-
-@media (max-width: 575px) {
-    .footer {
-        margin: -20px 0 30px 0;
-    }
-}
-
-.contact .php-email-form {
-    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
-    padding: 30px;
-    background: #fff;
-}
-
-  
-    
-    
-    .contact .php-email-form input,
-    .contact .php-email-form textarea {
-        border-radius: 0;
-        box-shadow: none;
-        font-size: 14px;
-        border-radius: 4px;
-    }
-
-        .contact .php-email-form input:focus,
-        .contact .php-email-form textarea:focus {
-            border-color: #ed502e;
-        }
-
-    .contact .php-email-form input {
-        padding: 10px 15px;
-    }
-
-    .contact .php-email-form textarea {
-        padding: 12px 15px;
-    }
-
-    .contact .php-email-form button[type=submit] {
-        background: #ed502e;
-        border: 0;
-        padding: 10px 30px;
-        border-radius: 4px;
-        color: #fff;
-        transition: 0.4s;
-    }
-
-        .contact .php-email-form button[type=submit]:hover {
-            background: #ef6445;
-        }
-
-@keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-/*contact ends*/
-
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
     padding: 60px 0;
+    margin-top:50px;
 }
 
 .section-bg {
@@ -483,7 +317,7 @@ section {
 }
 
 .section-title {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
     .section-title h2 {
@@ -517,6 +351,166 @@ section {
         color: #0f2f57;
     }
 /*section ends*/
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .about .content ul li {
+        padding-left: 28px;
+        position: relative;
+    }
+
+        .about .content ul li + li {
+            margin-top: 10px;
+        }
+
+    .about .content ul i {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 20px;
+        color: #ed502e;
+        line-height: 1;
+    }
+
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+
+.about .content .btn-learn-more {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 5px;
+    transition: 0.3s;
+    line-height: 1;
+    color: #ed502e;
+    animation-delay: 0.8s;
+    margin-top: 6px;
+    border: 2px solid #ed502e;
+}
+
+    .about .content .btn-learn-more:hover {
+        background: #ed502e;
+        color: #fff;
+        text-decoration: none;
+    }
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+    color: #0b2341;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 20px 0 30px 0;
+    background: #fff;
+}
+
+    .contact .info-box i {
+        font-size: 32px;
+        color: #ed502e;
+        border-radius: 50%;
+        padding: 8px;
+        border: 2px dotted #fbdad2;
+    }
+
+    .contact .info-box h3 {
+        font-size: 20px;
+        color: #777777;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+
+    .contact .info-box p {
+        padding: 0;
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+.contact .email-form {
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 30px;
+    background: #fff;
+}
+
+
+
+
+    .contact .email-form input,
+    .contact .email-form textarea {
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+        .contact .email-form input:focus,
+        .contact .email-form textarea:focus {
+            border-color: #ed502e;
+        }
+
+    .contact .email-form input {
+        padding: 10px 15px;
+    }
+
+    .contact .email-form textarea {
+        padding: 12px 15px;
+    }
+
+    .contact .email-form button[type=submit] {
+        background: #ed502e;
+        border: 0;
+        padding: 10px 30px;
+        border-radius: 4px;
+        color: #fff;
+        transition: 0.4s;
+    }
+
+        .contact .email-form button[type=submit]:hover {
+            background: #ef6445;
+        }
+
+/*footer*/
+
+.footer {
+    background: #071527;
+    padding: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+    .footer .copyright {
+        border-top: 1px solid #0f2f57;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+
+@media (max-width: 575px) {
+    .footer {
+        margin: -20px 0 30px 0;
+    }
+}
+
+
+
+/*footer ends*/
+
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -534,7 +528,7 @@ section {
     transition: all 0.4s;
 }
 
-    .back-to-top fa {
+    .back-to-top i {
         font-size: 28px;
         color: #fff;
         line-height: 0;
@@ -552,10 +546,4 @@ section {
 
 
     
-/*footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px;*/ /* Vertically center the text there */
-/*}*/
+
