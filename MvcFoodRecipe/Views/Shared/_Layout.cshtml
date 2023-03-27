@@ -30,97 +30,138 @@
 
 
     <!-- ======= Header ======= -->
-        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
             <div class=" navbar-brand logo">Food Recipe</div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav mx-auto mb-2 my-3">
-                        
 
-                        <a class=" nav-item nav-link active" aria-current="page" href="/Home/Index">Home</a>
-                       
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                    <a class=" nav-item nav-link active" aria-current="page" href="/Home/Index">Home</a>
+
                    
+
                     @if (!string.IsNullOrEmpty(username))
             {
-                        <div class="nav-item dropdown " >
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Admin
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item" href="/Food/Add">Food</a>
-                <a class="dropdown-item" href="/UserAuthentication/Logout">Logout</a>
-            </div></div>
+                    <div class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/Food/Add">Food</a>
+                            <a class="dropdown-item" href="/UserAuthentication/Logout">Logout</a>
+                        </div>
+                    </div>
             }
                     @if (string.IsNullOrEmpty(username))
                     {
-                          
-                            <a class=" nav-item nav-link" href="/UserAuthentication/Login">Login</a>
-                           
+
+                    <a class=" nav-item nav-link" href="/UserAuthentication/Login">Login</a>
+
                     }
                     <div class="navbar-nav ">
                         <a class=" nav-item nav-link active" href="/About">About</a>
                     </div>
                 </div>
-        </div> 
-        </div></nav>
-
-   @* <nav class="nav">
-            <div class="logo">
-                <a href="#">Food Recipe</a></div>
-           
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li> <a class="nav-link active" aria-current="page" href="/Home/Index">Home</a></li>
-
-                    @if (!string.IsNullOrEmpty(username))
-                    {
-                        <li class="nav-item dropdown last">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Admin
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/Food/Add">Food</a></li>
-                                <li><a class="dropdown-item" href="/UserAuthentication/Logout">Logout</a></li>
-                            </ul>
-                        </li>
-                    }
-                    @if (string.IsNullOrEmpty(username))
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link" href="/UserAuthentication/Login">Login</a>
-                        </li>
-                    }
-                </ul>
             </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
         </div>
-    </nav>*@
-    
+    </nav>
+
+
+
     <div class="container">
         @RenderBody()
     </div>
-    <footer>
-        &#169; 2023 Egbujie Chizoba
-    </footer>
-   <script>
-       $(document).ready(function(){
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Contact Us</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="info-box">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <h3>Our Address</h3>
+                                <p>12b Cetenary , Enugu, Nigeria </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <h3>Email Us</h3>
+                                <p>info@Tence.com<br>contact@Tenece.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <h3>Call Us</h3>
+                                <p>+2347031653729<br>+2347039013194</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+    
+    <!-- ======= Footer ======= -->
+    <footer class="footer">
+   
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Zober</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <script>
+        $(document).ready(function () {
             $('#pagination_example').DataTable({
 
-         searching: false
+                searching: false
 
-                    });
-       });
-   </script>
-  @* @await RenderSectionAsync("Scripts", required:false)*@
+            });
+        });
+    </script>
+    @* @await RenderSectionAsync("Scripts", required:false)*@
 
 </body>
 </html>
