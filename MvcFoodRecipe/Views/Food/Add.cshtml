@@ -4,8 +4,8 @@
 
     Layout = "_Layout";
 }
-
-<form class="w-40"  style="margin-top:50px"; asp-action="Add" method="post" enctype="multipart/form-data">
+<section>
+<form class="w-40"  asp-action="Add" method="post" enctype="multipart/form-data">
     <h4 style="margin-top:80px" ;class="pb-10">Add Recipe</h4>
     <input type="hidden" class="input" asp-for="Id">
     <input type="hidden" class="input" asp-for="RecipeImage">
@@ -84,7 +84,7 @@
         <a class="btn btn-sec" asp-controller="Food" asp-action="FoodList">All records</a>
     </div>
 </form>
-
+</section>
 
 
 

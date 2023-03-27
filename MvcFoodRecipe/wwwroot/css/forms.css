@@ -46,7 +46,7 @@ color: var(--primary - color);
     border-radius: 5px;
 }
 textarea{
-    height:150px;
+    height:80px;
     resize:vertical;
 }
  

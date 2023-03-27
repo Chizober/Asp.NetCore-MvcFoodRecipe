@@ -309,7 +309,7 @@ img {
 --------------------------------------------------------------*/
 section {
     padding: 60px 0;
-    margin-top:50px;
+    margin:50px 0;
 }
 
 .section-bg {
@@ -490,6 +490,10 @@ section {
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px;
+    position:fixed;
+    left: 0;
+    right: 0;
+    bottom:0;
 }
 
     .footer .copyright {
@@ -499,11 +503,11 @@ section {
     }
 
 
-@media (max-width: 575px) {
+/*@media (max-width: 575px) {
     .footer {
         margin: -20px 0 30px 0;
     }
-}
+}*/
 
 
 

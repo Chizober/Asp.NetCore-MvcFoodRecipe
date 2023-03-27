@@ -29,6 +29,11 @@ namespace MvcFoodRecipe.Controllers
             return View();
         }
 
+        public IActionResult Contact()
+        {
+
+            return View();
+        }
         public IActionResult FoodDetail(int foodId)
         {
             var food = _foodService.GetById(foodId);

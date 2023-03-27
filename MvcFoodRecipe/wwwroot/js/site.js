@@ -2,10 +2,18 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
+/**
+   * Back to top button
+   */
+let backtotop = select('.back-to-top')
+if (backtotop) {
+    const toggleBacktotop = () => {
+        if (window.scrollY > 100) {
+            backtotop.classList.add('active')
+        } else {
+            backtotop.classList.remove('active')
+        }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+}

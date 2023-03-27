@@ -1,6 +1,6 @@
 ﻿
 @model MvcFoodRecipe.Models.Domain.FoodItem
-
+<section>
 <form class="w-40" asp-action="Edit" method="post" enctype="multipart/form-data">
     <h2 class="pb-10">Update Recipe</h2>
     <input type="hidden" class="input" asp-for="Id">
@@ -81,4 +81,4 @@
         <a class="btn btn-sec" href="/FoodItem/RecipeList">All records</a>
     </div>
 </form>
-
+</section>
