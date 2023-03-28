@@ -34,9 +34,7 @@ body {
         align-items: center;
     }
 
-    .navbar li {
-        position: relative;
-    }
+  
     .navbar a, .navbar .nav-item
     .navbar a:focus, .navbar .nav-item {
         display: flex;
@@ -45,7 +43,6 @@ body {
         padding: 6px 10px 6px 30px;
         font-size: 15px;
         color: #0b2341;
-        ;
         white-space: nowrap;
         transition: 0.3s;
     }
@@ -58,15 +55,6 @@ body {
         color: #ed502e;
     }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Raleway", sans-serif;
-}
 
 
 
@@ -136,9 +124,6 @@ h6 {
 
 
 
-
-
-
 /*--------------------------------------------------------------
 # Index and foodlist pages
 --------------------------------------------------------------*/
@@ -158,6 +143,7 @@ img {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+    border-radius:3px;
 }
 
 .btn {
@@ -277,7 +263,7 @@ img {
 }
 .image{
     width:100%;
-    border-radius:3px;
+    border-radius:5px;
 }
 
 /* tablet breakpoint */
@@ -309,7 +295,7 @@ img {
 --------------------------------------------------------------*/
 section {
     padding: 60px 0;
-    margin:50px 0;
+    margin:50px 0 0px 0;
 }
 
 .section-bg {
@@ -387,7 +373,7 @@ section {
     margin-bottom: 0;
 }
 
-.about .content .btn-learn-more {
+.input-container .cardBtn,.data .cardBtn, .card_content .cardBtn, .about .content .cardBtn {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 14px;
@@ -403,11 +389,29 @@ section {
     border: 2px solid #ed502e;
 }
 
-    .about .content .btn-learn-more:hover {
+.card_content .cardBtn, .input-container .cardBtn {
+    background: transparent;
+}
+
+
+.input-container .cardBtn {
+   margin-left:5px;
+}
+    .input-container .cardBtn:last-child {
+        color: #071527;
+        border: 2px solid #071527;
+        text-decoration:none;
+    }
+    .input-container .cardBtn:last-child:hover{
+        background: #071527;
+        color:#fff;
+    }
+    .input-container .cardBtn:hover, .data .cardBtn:hover, .card_content .cardBtn:hover, .about .content .cardBtn:hover {
         background: #ed502e;
         color: #fff;
         text-decoration: none;
     }
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -487,19 +491,20 @@ section {
 
 .footer {
     background: #071527;
-    padding: 0 0 30px 0;
+    padding: 0 0 20px 0;
     color: #fff;
     font-size: 14px;
     position:fixed;
     left: 0;
     right: 0;
     bottom:0;
+    margin-top:70px;
 }
 
     .footer .copyright {
         border-top: 1px solid #0f2f57;
         text-align: center;
-        padding-top: 30px;
+        padding-top: 20px;
     }
 
 
@@ -534,7 +539,7 @@ section {
 
     .back-to-top i {
         font-size: 28px;
-        color: #fff;
+        color: orangered;
         line-height: 0;
     }
 

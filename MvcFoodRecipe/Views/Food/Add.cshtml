@@ -6,7 +6,7 @@
 }
 <section>
 <form class="w-40"  asp-action="Add" method="post" enctype="multipart/form-data">
-    <h4 style="margin-top:80px" ;class="pb-10">Add Recipe</h4>
+    <h4 style="margin-top:0px" ;class="pb-10">Add Recipe</h4>
     <input type="hidden" class="input" asp-for="Id">
     <input type="hidden" class="input" asp-for="RecipeImage">
 
@@ -79,10 +79,10 @@
         </div>
     }
 
-    <div class="input-container">
-        <button class="btn btn-default" type="submit">Save</button>
-        <a class="btn btn-sec" asp-controller="Food" asp-action="FoodList">All records</a>
-    </div>
+        <div class="input-container">
+            <button class="cardBtn" type="submit">Save</button>
+            <a class="cardBtn" href="/Food/FoodList">All records</a>
+        </div>
 </form>
 </section>
 
