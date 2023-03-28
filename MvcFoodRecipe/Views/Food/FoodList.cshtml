@@ -47,7 +47,7 @@
                 <td>@item.Calories</td>
                 <td>@item.Ingredients</td>
                 <td>@item.Steps</td>
-                <td>
+                <td style="margin-left:7px;display:flex;">
                     <a href="/Food/Edit?id=@item.Id" class="btn btn-default"><i class="fa fa-edit"></i></a>
                     <a onclick="return window.confirm('Are you sure?')" href="/Food/Delete?id=@item.Id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                 </td>
